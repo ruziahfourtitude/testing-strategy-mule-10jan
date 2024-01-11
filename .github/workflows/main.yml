@@ -38,6 +38,10 @@ jobs:
       - name: Install Anypoint CLI
         run: npm install -g anypoint-cli-v4
 
+        # Automation using Any CLI
+      - name: Automation using Any CLI (show account info)
+        run: anypoint-cli-v4 account:user:describe --client_id ef440d68a3124777aec73b39c78b4bd4 --client_secret 748C301217374C859cdd9b58287e4b16 -o json
+
       - name: Integration Testing ( Install BAT CLI)
         run: curl -o- 'https://s3.amazonaws.com/bat-wrapper/install.sh' | bash && echo Integration Testing Complete
         
